@@ -1,0 +1,60 @@
+1st 
+
+🔹 1. Initialize Repository
+mkdir data-science-project
+cd data-science-project
+git init
+✔ Explanation:
+mkdir → creates folder
+cd → enters folder
+git init → starts Git tracking
+👉 Now your project is under version control
+
+🔹 2. Connect GitHub (FIX NEEDED)
+git remote add origin https://github.com/YOUR-USERNAME/data-science-project.git
+git remote -v
+✔ Explanation:
+origin = name of remote repo
+URL is required (you missed it earlier)
+git remote -v → checks connection
+
+🔹 3. Create program1.py (Even/Odd)
+touch program1.py
+nano program1.py
+👉 Add code:
+num = int(input("Enter number: "))
+if num % 2 == 0:
+   print("Even")
+else:
+   print("Odd")
+✔ Explanation:
+touch → creates file
+nano → opens editor (Linux)
+
+🔹 4. Commit & Push
+git add .
+git commit -m "Added program1"
+git branch -M main
+git push -u origin main
+✔ Explanation:
+git add . → stage all files
+commit → save snapshot
+push → upload to GitHub
+
+🔹 5. Create Branch
+git checkout -b GIT-EXAM
+✔ Explanation:
+Creates a new branch (separate workspace)
+
+🔹 6. Create program2.py (Reverse String)
+touch program2.py
+nano program2.py
+👉 Add code:
+text = input("Enter string: ")
+print(text[::-1])
+
+🔹 7. Commit & Push Branch
+git add .
+git commit -m "Added program2"
+git push -u origin GIT-EXAM
+git diff main GIT-EXAM
